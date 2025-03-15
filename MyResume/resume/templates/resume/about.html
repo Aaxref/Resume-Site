@@ -1,0 +1,63 @@
+{% extends 'resume/base.html' %}
+{% load static %}
+
+{% block title %}درباره من و مهارت‌ها{% endblock %}
+
+{% block content %}
+<section class="about-skills" data-aos="fade-up">
+    <h1>درباره‌ی من و مهارت‌ها</h1>
+    <p class="intro">من عارف هستم، یه برنامه‌نویس وب که عاشق یادگیری و استفاده از هوش مصنوعیه! 👨‍💻</p>
+
+    <!-- بخش مهارت‌ها -->
+    <h2 class="section-title">مهارت‌ها</h2>
+    <div class="skills-container"> <!-- تغییر به skills-container برای هماهنگی با CSS -->
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+            <h3>زبان‌های برنامه‌نویسی</h3>
+            <p>Python, Django, JavaScript</p>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+            <h3>توسعه وب</h3>
+            <p>HTML5, CSS3, Bootstrap</p>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+            <h3>دیتابیس</h3>
+            <p>MySQL, PostgreSQL</p>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+            <h3>هوش مصنوعی</h3>
+            <p>TensorFlow (مبتدی)</p>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
+            <h3>ابزارها</h3>
+            <p>Git, VS Code, Figma</p>
+        </div>
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
+            <h3>مهارت‌های نرم</h3>
+            <p>خودآموزی، خلاقیت</p>
+        </div>
+    </div>
+
+    <!-- بخش درباره‌ی من -->
+    <h2 class="section-title">درباره‌ی من</h2>
+    <div class="about-container"> <!-- تغییر به about-container برای هماهنگی با CSS -->
+        <div class="about-card" data-aos="zoom-in" data-aos-delay="700">
+            <h3>خلاصه‌ی حرفه‌ای</h3>
+            <p>توسعه‌دهنده وب با تجربه در تجارت الکترونیک</p>
+        </div>
+        <div class="about-card" data-aos="zoom-in" data-aos-delay="800">
+            <h3>آموزش</h3>
+            <p>خودآموز | ۲۰۲۱ – تاکنون</p>
+        </div>
+        <div class="about-card" data-aos="zoom-in" data-aos-delay="900">
+            <h3>علایق و اهداف</h3>
+            <p>توسعه فول‌استک و هوش مصنوعی</p>
+        </div>
+        <div class="about-card" data-aos="zoom-in" data-aos-delay="1000">
+            <h3>زبان‌ها</h3>
+            <p>فارسی: مادری<br>انگلیسی: B2</p>
+        </div>
+    </div>
+
+    <a href="{% url 'contact' %}" class="center-btn">تماس با من</a>
+</section>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'resume/base.html' %}
+{% load static %}
+
+{% block title %}پیام‌ها و پاسخ‌ها{% endblock %}
+
+{% block content %}
+<section class="messages-list" data-aos="fade-up">
+    <h1>پیام‌ها و پاسخ‌ها <span style="color: #ff5f00; text-shadow: 0 0 10px rgba(255, 95, 0, 0.7);">✉️</span></h1>
+    <div class="messages-container">
+        {% for message in messages %}
+            <div class="message-card" data-aos="zoom-in" data-aos-delay="{% cycle '100' '200' '300' %}">
+                <p><strong>اسم:</strong> {{ message.name }}</p>
+                <p><strong>ایمیل:</strong> {{ message.email }}</p>
+                <p><strong>پیام:</strong> {{ message.message }}</p>
+                {% if message.response %}
+                    <p class="response"><strong>پاسخ من:</strong> {{ message.response }}</p>
+                {% else %}
+                    <p class="no-response"><strong>هنوز پاسخی ندادم!</strong></p>
+                    {% if user.is_superuser %}
+                        <form method="POST" action="{% url 'response_to_message' message.id %}" class="response-form">
+                            {% csrf_token %}
+                            {{ response_form.as_p }}
+                            <button type="submit" class="btn">ارسال پاسخ</button>
+                        </form>
+                    {% endif %}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

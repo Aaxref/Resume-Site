@@ -1,0 +1,40 @@
+{% extends 'resume/base.html' %}
+{% load static %}
+
+{% block title %}صفحه اصلی - عارف{% endblock %}
+
+{% block content %}
+<!-- هدر هیرو با انیمیشن و گرادیانت -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content" data-aos="fade-up">
+        <h1 class="hero-title">
+            من عارفم<span class="highlight">✨</span>
+        </h1>
+        <p class="hero-subtitle">
+            توسعه‌دهنده وب | کاوشگر <span class="ai-text">هوش مصنوعی</span> | فریلنسر خلاق
+        </p>
+        <div class="hero-buttons">
+            <a href="/about/" class="btn">رزومه من</a>
+            <a href="{% url 'projects' %}" class="btn secondary-btn">پروژه‌هام</a>
+        </div>
+    </div>
+</section>
+
+<!-- بخش معرفی کوتاه با کارت‌های شناور -->
+<section class="summary" data-aos="fade-in">
+    <div class="summary-card">
+        <h2 class="summary-card-title">کی‌ام؟</h2>
+        <p class="summary-card-text">
+            یه برنامه‌نویس خودآموز که با <span class="highlight">جنگو</span> وب‌سایت‌های خفن می‌سازه.
+        </p>
+    </div>
+    <div class="summary-card">
+        <h2 class="summary-card-title">چی دوست دارم؟</h2>
+        <p class="summary-card-text">
+            غرق شدن توی دنیای <span class="ai-text">AI</span> و ساختن چیزای جدید!
+        </p>
+    </div>
+    <a href="{% url 'projects' %}" class="center-btn">بیا کارامو ببین!</a>
+</section>
+{% endblock %}

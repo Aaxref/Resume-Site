@@ -1,0 +1,27 @@
+{% extends 'resume/base.html' %}
+{% load static %}
+
+{% block title %}پروژه‌ها{% endblock %}
+
+{% block content %}
+<section class="projects" data-aos="fade-up">
+    <h1>پروژه‌های من</h1>
+    <div class="project-container">
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+            <h2>پلتفرم فروشگاهی</h2>
+            <p>طراحی یک فروشگاه آنلاین با Django و PostgreSQL با قابلیت مدیریت محصولات، سبد خرید و پرداخت.</p>
+            <a href="#" class="btn">مشاهده پروژه</a>
+        </div>
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+            <h2>سیستم مدیریت محتوای موسیقی</h2>
+            <p>یک CMS برای علاقه‌مندان به موسیقی، ساخته شده با Python و Django برای آپلود و سازمان‌دهی ترک‌ها.</p>
+            <a href="#" class="btn">مشاهده پروژه</a>
+        </div>
+        <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+            <h2>وب‌سایت شرکتی</h2>
+            <p>ساخت یک وب‌سایت شرکتی ریسپانسیو با Bootstrap و Django، دارای صفحات خدمات و تماس.</p>
+            <a href="#" class="btn">مشاهده پروژه</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

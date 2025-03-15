@@ -1,0 +1,35 @@
+{% extends 'resume/base.html' %}
+{% load static %}
+
+{% block title %}تماس با من{% endblock %}
+
+{% block content %}
+<section class="contact" data-aos="fade-up">
+    <h1>تماس با من <span style="color: #ff5f00; text-shadow: 0 0 10px rgba(255, 95, 0, 0.7);">✨</span></h1>
+    <p class="intro">اگه سوالی داری یا می‌خوای باهم پروژه بزنیم، همین‌جا پیام بده!</p>
+    <div class="contact-container">
+        <div class="contact-info" data-aos="zoom-in" data-aos-delay="100">
+            <p><strong>📧 ایمیل:</strong> <a href="mailto:arefm23@gmail.com">arefm23@gmail.com</a></p>
+            <p><strong>📱 تلگرام:</strong> <a href="https://t.me/Aaxref" target="_blank">@aaxref</a></p>
+        </div>
+        <div class="contact-form" data-aos="zoom-in" data-aos-delay="200">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">اسم تو</label>
+                    <input type="text" id="name" name="name" placeholder="اسمت رو بنویس" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">ایمیل</label>
+                    <input type="email" id="email" name="email" placeholder="ایمیلت رو وارد کن" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">پیامت</label>
+                    <textarea id="message" name="message" rows="5" placeholder="چی می‌خوای بگی؟" required></textarea>
+                </div>
+                <button type="submit" class="btn">بفرست بره!</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
