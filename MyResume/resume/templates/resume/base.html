@@ -1,5 +1,7 @@
-<!DOCTYPE html>
 {% load static %}
+
+<!DOCTYPE html>
+
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +10,15 @@
     <link rel="stylesheet" href="{% static 'resume/css/style.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="manifest" href="{% static 'resume/js/manifest.json' %}">
+    <script>
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("{% static 'resume/js/service-worker.js' %}")
+        .then(() => console.log("Service Worker Registered"))
+        .catch((err) => console.error("Service Worker Failed", err));
+    }
+    </script>
 </head>
 <body>
     <header>
